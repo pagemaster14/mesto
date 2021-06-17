@@ -1,0 +1,16 @@
+.profile-info__bio {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    grid-area: profile-info__bio;
+}
+
+@media screen and (min-width: 768px) {
+    .profile-info__bio {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

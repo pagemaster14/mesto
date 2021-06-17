@@ -1,0 +1,16 @@
+.profile-info__name {
+    margin: 0;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+    grid-area: profile-info__name;
+}
+
+@media screen and (min-width: 768px) {
+    .profile-info__name {
+        font-size: 42px;
+        line-height: 48px;
+    }
+}

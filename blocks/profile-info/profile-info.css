@@ -1,0 +1,18 @@
+.profile-info {
+    max-width: 282px;
+    max-height: 54px;
+    margin-top: 22.25px;
+    display: grid;
+    grid-template-columns: 189px 1fr;
+    grid-template-areas: "profile-info__name edit-button" "profile-info__bio profile-info__bio";
+    gap: 10px 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .profile-info {
+        margin-left: 30px;
+        max-width: 336px;
+        max-height: 73px;
+        grid-template-columns: 294px 1fr;
+    }
+}

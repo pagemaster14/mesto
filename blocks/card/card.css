@@ -1,0 +1,21 @@
+.card {
+    margin: 20px auto 0;
+    max-width: 282px;
+    max-height: 362px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    display: grid;
+    grid-template-columns: 189px 1fr;
+    grid-template-areas: "card__image card__image" "card__name like-button";
+    gap: 25px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        margin: 0;
+    }
+}
+
+.card:first-child {
+    margin-top: 0;
+}
