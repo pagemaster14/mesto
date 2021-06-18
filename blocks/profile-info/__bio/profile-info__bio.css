@@ -6,10 +6,14 @@
     text-align: center;
     color: #FFFFFF;
     grid-area: profile-info__bio;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
     .profile-info__bio {
+        text-align: left;
         font-size: 18px;
         line-height: 22px;
     }

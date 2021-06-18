@@ -1,4 +1,4 @@
-.input__text {
+.form__text {
     width: 100%;
     font-family: 'Inter', 'Arial', sans-serif;
     font-weight: normal;
@@ -9,6 +9,6 @@
     padding-bottom: 13px;
 }
 
-.input__text:first-child {
+.form__text:first-child {
     margin-bottom: 30px;
 }

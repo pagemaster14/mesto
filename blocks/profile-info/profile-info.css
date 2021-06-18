@@ -1,6 +1,5 @@
 .profile-info {
     max-width: 282px;
-    max-height: 54px;
     margin-top: 22.25px;
     display: grid;
     grid-template-columns: 189px 1fr;
@@ -12,7 +11,6 @@
     .profile-info {
         margin-left: 30px;
         max-width: 336px;
-        max-height: 73px;
         grid-template-columns: 294px 1fr;
     }
 }

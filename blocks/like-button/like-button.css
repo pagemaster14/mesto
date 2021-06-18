@@ -2,7 +2,7 @@
     width: 22px;
     height: 19px;
     grid-area: like-button;
-    margin: 0 auto 31px;
+    margin: 0 auto;
     padding: 0;
     border-style: none;
     background-image: url(../../images/Vector\ \(Stroke\).svg);
@@ -11,6 +11,7 @@
     background-repeat: no-repeat;
     background-color: #FFFFFF;
     transition: opacity .5s ease 0.5s;
+    align-self: center;
 }
 
 .like-button:hover {

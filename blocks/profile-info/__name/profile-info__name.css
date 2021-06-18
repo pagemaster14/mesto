@@ -6,6 +6,9 @@
     text-align: center;
     color: #FFFFFF;
     grid-area: profile-info__name;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
