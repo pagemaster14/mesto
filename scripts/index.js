@@ -28,14 +28,7 @@ const createItem = (name, link) => {
     selectCard.src = link;
     selectCard.alt = name;
 
-    newCard.querySelector('.card__image').addEventListener('click', () => takePreviewImage());
-    const takePreviewImage = () => {
-        popupPlaceImage.src = selectCard.src;
-        popupPlaceImage.alt = selectCard.alt;
-        popupPlaceName.textContent = selectCard.alt;
-    };
-
-    setEventListeners(newCard);
+    setEventListeners(newCard, selectCard);
     return newCard;
 }
 
@@ -50,14 +43,21 @@ function formAddSubmitHandler(evt) {
     closePopup(popupAddElement)
 }
 
-function setEventListeners(newCard) {
+const takePreviewImage = (selectCard) => {
+    popupPlaceImage.src = selectCard.src;
+    popupPlaceImage.alt = selectCard.alt;
+    popupPlaceName.textContent = selectCard.alt;
+    openPopup(popupPlaceElement)
+};
+
+function setEventListeners(newCard, selectCard) {
     newCard.querySelector('.delete-button').addEventListener('click', function(evt) {
         evt.target.closest('.card').remove();
     });
     newCard.querySelector('.like-button').addEventListener('click', function(evt) {
         evt.target.classList.toggle('like-button_active')
     });
-    newCard.querySelector('.card__image').addEventListener('click', () => openPopup(popupPlaceElement));
+    newCard.querySelector('.card__image').addEventListener('click', () => takePreviewImage(selectCard));
 }
 
 function openProfilePopup() {
