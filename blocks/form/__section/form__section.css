@@ -1,0 +1,7 @@
+.form__section {
+    position: relative;
+}
+
+.form__section:nth-child(2) {
+    margin-top: 30px;
+}

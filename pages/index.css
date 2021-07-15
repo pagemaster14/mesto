@@ -32,40 +32,7 @@
 @import url(../blocks/popup-place/__image/popup-place__image.css);
 @import url(../blocks/popup-place/__name/popup-place__name.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
-.form__section {
-    position: relative;
-}
-
-.form__section:nth-child(2) {
-    margin-top: 30px;
-}
-
-.form__input-error {
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
-    color: #FF0000;
-    opacity: 0;
-    position: absolute;
-    top: calc(100% + 5px);
-    left: 0;
-    transition: opacity 0.3s;
-}
-
-.form__input-error_active {
-    opacity: 1;
-}
-
-.form__submit-btn_inactive {
-    color: #000000;
-    opacity: 0.2;
-    background: #E5E5E5;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 2px;
-    pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
+@import url(../blocks/form/__section/form__section.css);
+@import url(../blocks/form/__input-error/form__input-error.css);
+@import url(../blocks/form/__input-error/_active/form__input-error_active.css);
+@import url(../blocks/form/__submit-btn/_inactive/form__submit-btn_inactive.css);
