@@ -1,6 +1,7 @@
 const popupEditOpenButtonElement = document.querySelector('.edit-button');
 const popupAddOpenButtonElement = document.querySelector('.add-button');
 const popupElement = document.querySelector('.popup');
+const popupElements = document.querySelectorAll('.popup');
 const popupEditCloseButtonElement = document.querySelector('.popup-close_type_edit');
 const popupAddCloseButtonElement = document.querySelector('.popup-close_type_add');
 const popupPlaceCloseButtonElement = document.querySelector('.popup-close_type_image');
@@ -20,12 +21,12 @@ const popupEditElement = document.querySelector('.popup_type_edit-profile');
 const popupAddElement = document.querySelector('.popup_type_add');
 const popupPlaceElement = document.querySelector('.popup-place');
 
-const createItem = (cardName, cardImg) => {
+const createItem = (name, link) => {
     const newCard = itemTemplateContent.querySelector('.card').cloneNode(true);
-    newCard.querySelector('.card__name').textContent = cardName;
+    newCard.querySelector('.card__name').textContent = name;
     const selectCard = newCard.querySelector('.card__image');
-    selectCard.src = cardImg;
-    selectCard.alt = cardName;
+    selectCard.src = link;
+    selectCard.alt = name;
 
     newCard.querySelector('.card__image').addEventListener('click', () => takePreviewImage());
     const takePreviewImage = () => {
@@ -67,6 +68,7 @@ function openProfilePopup() {
 
 const openPopup = (popupElement) => {
     popupElement.classList.add('popup_opened');
+    document.addEventListener('keydown', keyHandler)
 }
 
 const closePopup = (popupElement) => {
@@ -79,6 +81,24 @@ function formSubmitHandler(evt) {
     profileJob.textContent = jobInput.value;
     closePopup(popupEditElement)
 }
+
+function keyHandler(evt) {
+    const activePopup = document.querySelector('.popup_opened');
+    if (evt.key === 'Escape') {
+        closePopup(activePopup)
+        activePopup.removeEventListener('keydown', keyHandler);
+    }
+}
+
+popupElements.forEach((openedPopup) => {
+    const currentPopup = openedPopup.closest('.popup');
+    openedPopup.addEventListener('mousedown', (event) => {
+        if (event.target !== event.currentTarget) {
+            return
+        }
+        closePopup(currentPopup)
+    })
+})
 
 formElement.addEventListener('submit', formSubmitHandler);
 formAddElement.addEventListener('submit', formAddSubmitHandler);

@@ -9,6 +9,6 @@
     padding-bottom: 13px;
 }
 
-.form__text:first-child {
-    margin-bottom: 30px;
+.form__text:not(:focus):invalid {
+    border-bottom: 1px solid #FF0000;
 }
