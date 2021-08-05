@@ -8,8 +8,14 @@ export class Card {
         this._handleCardClick = handleCardClick
     }
 
-    renderCard() {
+    _getCard() {
         this._newCard = this._template.querySelector('.card').cloneNode(true);
+
+        return this._newCard
+    }
+
+    renderCard() {
+        this._element = this._getCard()
         this._cardName = this._newCard.querySelector('.card__name')
         this._selectCard = this._newCard.querySelector('.card__image');
         this._deleteButton = this._newCard.querySelector('.delete-button');
@@ -21,7 +27,7 @@ export class Card {
 
         this._setEventListeners()
 
-        return this._newCard
+        return this._element
     }
 
     _setEventListeners() {
