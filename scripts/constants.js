@@ -9,6 +9,7 @@ const profileName = document.querySelector('.profile-info__name');
 const profileJob = document.querySelector('.profile-info__bio');
 const formElement = document.querySelector('.form');
 const formAddElement = document.querySelector('.form_type_add');
+const formEditElement = document.querySelector('.form_type_edit');
 const nameInput = document.querySelector('.form__text_type_name');
 const jobInput = document.querySelector('.form__text_type_bio');
 const cardName = document.querySelector('.form__text_type_place');
