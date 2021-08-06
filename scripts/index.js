@@ -1,3 +1,5 @@
+import { initialCards } from './initialCards.js'
+import { popupEditOpenButtonElement, popupAddOpenButtonElement, popupElements, profileName, profileJob, formElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupPlaceImage, popupPlaceName, popupEditElement, popupAddElement, popupPlaceElement } from './constants.js';
 import { Card } from './Card.js'
 import { FormValidator } from './FormValidator.js'
 
@@ -71,19 +73,18 @@ function keyHandler(evt) {
     }
 }
 
-popupElements.forEach((openedPopup) => {
-    openedPopup.addEventListener('mousedown', (event) => {
-        if (event.target !== event.currentTarget) {
-            return
+popupElements.forEach((popup) => {
+    popup.addEventListener('mousedown', (evt) => {
+        if (evt.target.classList.contains('popup_opened')) {
+            closePopup(popup)
         }
-        closePopup(openedPopup)
+        if (evt.target.classList.contains('popup-close')) {
+            closePopup(popup)
+        }
     })
 })
 
 formElement.addEventListener('submit', formSubmitHandler);
 formAddElement.addEventListener('submit', formAddSubmitHandler);
-popupEditCloseButtonElement.addEventListener('click', () => closePopup(popupEditElement));
-popupAddCloseButtonElement.addEventListener('click', () => closePopup(popupAddElement));
-popupPlaceCloseButtonElement.addEventListener('click', () => closePopup(popupPlaceElement));
 popupEditOpenButtonElement.addEventListener('click', () => openProfilePopup());
 popupAddOpenButtonElement.addEventListener('click', () => openPopup(popupAddElement));

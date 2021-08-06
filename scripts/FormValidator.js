@@ -66,7 +66,7 @@ export class FormValidator {
         const handleFormSubmit = (event) => {
             event.preventDefault();
         };
-        formElement.addEventListener("submit", handleFormSubmit);
+        this._formElement.addEventListener("submit", handleFormSubmit);
 
         const inputListIterator = (inputElement) => {
             const handleInput = () => {

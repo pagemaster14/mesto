@@ -1,10 +1,6 @@
 const popupEditOpenButtonElement = document.querySelector('.edit-button');
 const popupAddOpenButtonElement = document.querySelector('.add-button');
-const popupElement = document.querySelector('.popup');
 const popupElements = document.querySelectorAll('.popup');
-const popupEditCloseButtonElement = document.querySelector('.popup-close_type_edit');
-const popupAddCloseButtonElement = document.querySelector('.popup-close_type_add');
-const popupPlaceCloseButtonElement = document.querySelector('.popup-close_type_image');
 const profileName = document.querySelector('.profile-info__name');
 const profileJob = document.querySelector('.profile-info__bio');
 const formElement = document.querySelector('.form');
@@ -21,3 +17,5 @@ const popupPlaceName = document.querySelector('.popup-place__name');
 const popupEditElement = document.querySelector('.popup_type_edit-profile');
 const popupAddElement = document.querySelector('.popup_type_add');
 const popupPlaceElement = document.querySelector('.popup-place');
+
+export { popupEditOpenButtonElement, popupAddOpenButtonElement, popupElements, profileName, profileJob, formElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupPlaceImage, popupPlaceName, popupEditElement, popupAddElement, popupPlaceElement };
