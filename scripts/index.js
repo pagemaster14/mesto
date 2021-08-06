@@ -1,13 +1,16 @@
 import { Card } from './Card.js'
 import { FormValidator } from './FormValidator.js'
 
+
 const validationSettings = {
     formSelector: '.form',
     inputSelector: '.form__text',
     submitButtonSelector: '.form__submit-btn',
     inactiveButtonClass: 'form__submit-btn_inactive',
     inputErrorClass: '.form__input-error',
-    errorClass: 'form__input-error_active'
+    errorClass: 'form__input-error_active',
+    formSection: '.form__section',
+    formInputError: '.form__input-error'
 };
 
 const editProfileValidator = new FormValidator(validationSettings, formEditElement)
@@ -34,6 +37,7 @@ function formAddSubmitHandler(evt) {
     cardContainer.prepend(card.renderCard());
     formAddElement.reset();
     closePopup(popupAddElement)
+    addNewCardValidator.resetValidation()
 }
 
 function openProfilePopup() {
@@ -45,6 +49,7 @@ function openProfilePopup() {
 export const openPopup = (popupElement) => {
     popupElement.classList.add('popup_opened');
     document.addEventListener('keydown', keyHandler)
+    addNewCardValidator.resetValidation()
 }
 
 const closePopup = (popupElement) => {
@@ -60,19 +65,18 @@ function formSubmitHandler(evt) {
 }
 
 function keyHandler(evt) {
-    const activePopup = document.querySelector('.popup_opened');
     if (evt.key === 'Escape') {
+        const activePopup = document.querySelector('.popup_opened');
         closePopup(activePopup)
     }
 }
 
 popupElements.forEach((openedPopup) => {
-    const currentPopup = openedPopup.closest('.popup');
     openedPopup.addEventListener('mousedown', (event) => {
         if (event.target !== event.currentTarget) {
             return
         }
-        closePopup(currentPopup)
+        closePopup(openedPopup)
     })
 })
 
