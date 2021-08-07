@@ -21,8 +21,7 @@ editProfileValidator.enableValidation()
 addNewCardValidator.enableValidation()
 
 initialCards.forEach(function(el) {
-    const card = new Card(el.name, el.link, itemTemplateContent, handleCardClick)
-    cardContainer.append(card.renderCard());
+    cardContainer.append(createCard(el.name, el.link));
 });
 
 function handleCardClick(name, link) {
@@ -34,12 +33,16 @@ function handleCardClick(name, link) {
 
 
 function formAddSubmitHandler(evt) {
-    const card = new Card(cardName.value, cardImg.value, itemTemplateContent, handleCardClick)
     evt.preventDefault();
-    cardContainer.prepend(card.renderCard());
+    cardContainer.prepend(createCard(cardName.value, cardImg.value));
     formAddElement.reset();
     closePopup(popupAddElement)
     addNewCardValidator.resetValidation()
+}
+
+function createCard(name, link) {
+    const card = new Card(name, link, itemTemplateContent, handleCardClick)
+    return card.renderCard()
 }
 
 function openProfilePopup() {
