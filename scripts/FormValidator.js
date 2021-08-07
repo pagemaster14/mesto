@@ -11,6 +11,7 @@ export class FormValidator {
         this._formElement = formElement
         this._inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector))
         this._buttonElement = this._formElement.querySelector(this._submitButtonSelector);
+        this._invalidText = config.invalidText
     }
 
     _showInputError(inputElement, errorMessage) {
@@ -19,6 +20,8 @@ export class FormValidator {
 
         errorElement.textContent = errorMessage;
         errorElement.classList.add(this._errorClass);
+        const closestInput = formSectionElement.querySelector(this._inputSelector);
+        closestInput.classList.add(this._invalidText);
     };
 
     _hideInputError(inputElement) {
@@ -27,6 +30,8 @@ export class FormValidator {
 
         errorElement.textContent = "";
         errorElement.classList.remove(this._errorClass);
+        const closestInput = formSectionElement.querySelector(this._inputSelector);
+        closestInput.classList.remove(this._invalidText);
     };
 
     resetValidation() {

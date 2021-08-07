@@ -12,7 +12,8 @@ const validationSettings = {
     inputErrorClass: '.form__input-error',
     errorClass: 'form__input-error_active',
     formSection: '.form__section',
-    formInputError: '.form__input-error'
+    formInputError: '.form__input-error',
+    invalidText: 'form__text_invalid'
 };
 
 const editProfileValidator = new FormValidator(validationSettings, formEditElement)
