@@ -50,12 +50,12 @@ function openProfilePopup() {
     openPopup(popupEditElement)
     nameInput.value = profileName.textContent;
     jobInput.value = profileJob.textContent;
+    editProfileValidator.resetValidation()
 }
 
 export const openPopup = (popupElement) => {
     popupElement.classList.add('popup_opened');
     document.addEventListener('keydown', keyHandler)
-    addNewCardValidator.resetValidation()
 }
 
 const closePopup = (popupElement) => {
