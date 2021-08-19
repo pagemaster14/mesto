@@ -1,7 +1,7 @@
 export class Card {
-    constructor(name, link, template, handleCardClick) {
-        this._name = name
-        this._link = link
+    constructor(data, template, handleCardClick) {
+        this._name = data.name
+        this._link = data.link
         this._template = template
         this._handleCardClick = handleCardClick
     }
@@ -44,7 +44,7 @@ export class Card {
     }
 
     _deleteCard() {
-        this._deleteButton.closest('.card').remove();
+        this._element.remove();
     }
 
 }
