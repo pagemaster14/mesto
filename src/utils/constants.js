@@ -12,4 +12,16 @@ const popupEditElement = document.querySelector('.popup_type_edit-profile');
 const popupAddElement = document.querySelector('.popup_type_add');
 const popupPlaceElement = document.querySelector('.popup-place');
 
-export { popupEditOpenButtonElement, popupAddOpenButtonElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupEditElement, popupAddElement, popupPlaceElement };
+const validationSettings = {
+    formSelector: '.form',
+    inputSelector: '.form__text',
+    submitButtonSelector: '.form__submit-btn',
+    inactiveButtonClass: 'form__submit-btn_inactive',
+    inputErrorClass: '.form__input-error',
+    errorClass: 'form__input-error_active',
+    formSection: '.form__section',
+    formInputError: '.form__input-error',
+    invalidText: 'form__text_invalid'
+};
+
+export { validationSettings, popupEditOpenButtonElement, popupAddOpenButtonElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupEditElement, popupAddElement, popupPlaceElement };

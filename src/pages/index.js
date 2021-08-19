@@ -1,7 +1,7 @@
 import '../pages/index.css';
 
 import { initialCards } from '../utils/initialCards.js'
-import { popupEditOpenButtonElement, popupAddOpenButtonElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupEditElement, popupAddElement, popupPlaceElement } from '../utils/constants.js';
+import { validationSettings, popupEditOpenButtonElement, popupAddOpenButtonElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupEditElement, popupAddElement, popupPlaceElement } from '../utils/constants.js';
 import { Card } from '../components/Card.js'
 import { FormValidator } from '../components/FormValidator.js'
 import { Section } from '../components/Section.js';
@@ -9,20 +9,7 @@ import { PopupWithImage } from '../components/PopupWithImage.js';
 import { PopupWithForm } from '../components/PopupWithForm.js';
 import { UserInfo } from '../components/UserInfo.js';
 
-const validationSettings = {
-    formSelector: '.form',
-    inputSelector: '.form__text',
-    submitButtonSelector: '.form__submit-btn',
-    inactiveButtonClass: 'form__submit-btn_inactive',
-    inputErrorClass: '.form__input-error',
-    errorClass: 'form__input-error_active',
-    formSection: '.form__section',
-    formInputError: '.form__input-error',
-    invalidText: 'form__text_invalid'
-};
-
 const originalCardsList = new Section({
-        items: initialCards,
         renderer: (item) => {
             const cardElement = createCard(item)
             originalCardsList.addItem(cardElement);
@@ -30,7 +17,7 @@ const originalCardsList = new Section({
     },
     cardContainer
 );
-originalCardsList.renderItems();
+originalCardsList.renderItems(initialCards);
 
 function createCard(data) {
     const card = new Card(data, itemTemplateContent, handleCardClick)
@@ -51,11 +38,7 @@ function handleCardClick(name, link) {
 };
 popupPlaceView.setEventListeners()
 
-const newCard = new PopupWithForm(popupAddElement, () => {
-        const item = {
-            name: cardName.value,
-            link: cardImg.value
-        };
+const newCard = new PopupWithForm(popupAddElement, (item) => {
         const newCardElement = createCard(item)
         originalCardsList.addItemPrepend(newCardElement);
         newCard.close()
