@@ -1,7 +1,7 @@
 import '../pages/index.css';
 
-import { initialCards } from '../components/utils/initialCards.js'
-import { popupEditOpenButtonElement, popupAddOpenButtonElement, popupElements, profileName, profileJob, formElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupPlaceImage, popupPlaceName, popupEditElement, popupAddElement, popupPlaceElement } from '../components/utils/constants.js';
+import { initialCards } from '../utils/initialCards.js'
+import { popupEditOpenButtonElement, popupAddOpenButtonElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupEditElement, popupAddElement, popupPlaceElement } from '../utils/constants.js';
 import { Card } from '../components/Card.js'
 import { FormValidator } from '../components/FormValidator.js'
 import { Section } from '../components/Section.js';

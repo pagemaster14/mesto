@@ -1,9 +1,5 @@
 const popupEditOpenButtonElement = document.querySelector('.edit-button');
 const popupAddOpenButtonElement = document.querySelector('.add-button');
-const popupElements = document.querySelectorAll('.popup');
-const profileName = document.querySelector('.profile-info__name');
-const profileJob = document.querySelector('.profile-info__bio');
-const formElement = document.querySelector('.form');
 const formAddElement = document.querySelector('.form_type_add');
 const formEditElement = document.querySelector('.form_type_edit');
 const nameInput = document.querySelector('.form__text_type_name');
@@ -12,10 +8,8 @@ const cardName = document.querySelector('.form__text_type_place');
 const cardImg = document.querySelector('.form__text_type_img');
 const itemTemplateContent = document.querySelector('.item-template').content;
 const cardContainer = document.querySelector('.cards');
-const popupPlaceImage = document.querySelector('.popup-place__image');
-const popupPlaceName = document.querySelector('.popup-place__name');
 const popupEditElement = document.querySelector('.popup_type_edit-profile');
 const popupAddElement = document.querySelector('.popup_type_add');
 const popupPlaceElement = document.querySelector('.popup-place');
 
-export { popupEditOpenButtonElement, popupAddOpenButtonElement, popupElements, profileName, profileJob, formElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupPlaceImage, popupPlaceName, popupEditElement, popupAddElement, popupPlaceElement };
+export { popupEditOpenButtonElement, popupAddOpenButtonElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupEditElement, popupAddElement, popupPlaceElement };
