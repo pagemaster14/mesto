@@ -12,10 +12,10 @@
 .edit-button{align-self:center;background-color:transparent;background-image:url(images/ruchka.8667ac4a523e8fc42e59.svg);background-position:50%;background-repeat:no-repeat;border:1px solid #fff;box-sizing:border-box;cursor:pointer;grid-area:edit-button;height:18px;padding:0;transition:opacity .5s ease .5s;width:18px}.edit-button:hover{opacity:.6}@media screen and (min-width:768px){.edit-button{height:24px;width:24px}}
 .add-button{background-color:transparent;background-image:url(images/Vectorkrest.d86bb2edc2f6eadb96b7.svg);background-position:50%;background-repeat:no-repeat;border:2px solid #fff;border-radius:2px;box-sizing:border-box;cursor:pointer;margin:36px 16px 0;min-height:50px;padding:0;transition:opacity .5s ease .5s;width:278px}.add-button:hover{opacity:.6}@media screen and (min-width:768px){.add-button{margin-left:auto;margin-right:0;max-width:150px}}
 .cards{margin:36px 19px 0;min-height:150px}@media screen and (min-width:768px){.cards{display:grid;gap:17px 20px;grid-template-columns:282px 282px;grid-template-rows:repeat(2,361px);justify-content:center;margin:47.25px auto 0;max-width:880px}}@media screen and (min-width:1024px){.cards{grid-template-columns:282px 282px 282px}}
-.card{background:#fff;border-radius:10px;display:grid;grid-template-areas:"card__image card__image" "card__name like-button";grid-template-columns:189px 1fr;grid-template-rows:282px 79px;margin:20px auto 0;max-width:282px;position:relative}@media screen and (min-width:768px){.card{margin:0}}.card:first-child{margin-top:0}
+.card{background:#fff;border-radius:10px;display:grid;grid-template-areas:"card__image card__image" "card__name card__like-block";grid-template-columns:189px 1fr;grid-template-rows:282px 79px;margin:20px auto 0;max-width:282px;position:relative}@media screen and (min-width:768px){.card{margin:0}}.card:first-child{margin-top:0}
 .card__image{border-radius:10px 10px 0 0;grid-area:card__image;height:282px;width:100%}
 .card__name{align-self:center;color:#000;font-size:24px;font-weight:900;grid-area:card__name;line-height:29px;margin:0;overflow:hidden;padding:0 0 0 21px;text-overflow:ellipsis;white-space:nowrap}
-.like-button{align-self:center;background-color:#fff;background-image:url(images/VectorStroke.bf45e82757b0b9e50dfb.svg);background-position:50%;background-repeat:no-repeat;background-size:contain;border-style:none;grid-area:like-button;height:19px;margin:0 auto;padding:0;transition:opacity .5s ease .5s;width:22px}.like-button:hover{opacity:.5}
+.like-button{align-self:center;background-color:#fff;background-image:url(images/VectorStroke.bf45e82757b0b9e50dfb.svg);background-position:50%;background-repeat:no-repeat;background-size:contain;border-style:none;height:19px;transition:opacity .5s ease .5s;width:22px}.like-button:hover{opacity:.5}
 .like-button_active{background-image:url(images/Union.fe17a515669479b1e649.svg)}
 .footer{margin:48px 0 0 19px;max-width:880px;min-width:282px;padding-bottom:36px}@media screen and (min-width:768px){.footer{margin:67px 0 0 19px;min-width:318px;padding-bottom:60px}}@media screen and (min-width:1280px){.footer{margin:67px 0 0 200px}}
 .footer__copyright{color:#545454;font-size:14px;font-weight:400;line-height:17px;margin:0}@media screen and (min-width:768px){.footer__copyright{font-size:18px;line-height:22px}}
@@ -28,7 +28,7 @@
 .form__text{border:none;border-bottom:1px solid rgba(0,0,0,.2);font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:400;line-height:17px;padding-bottom:13px;width:100%}
 .form__text_invalid{border-bottom:1px solid red}
 .form__submit-btn{background:#000;border-radius:2px;color:#fff;cursor:pointer;font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:400;height:46px;line-height:17px;margin-top:45px;text-align:center;transition:opacity .5s ease .5s;width:238px}@media screen and (min-width:768px){.form__submit-btn{font-size:18px;height:50px;line-height:22px;margin-top:48px;width:358px}}.form__submit-btn:hover{opacity:.8}
-.delete-button{background-color:transparent;background-image:url(images/delete.a274c87c0f6b553b47ad.svg);background-position:50%;background-repeat:no-repeat;background-size:contain;border-style:none;cursor:pointer;height:19.3px;padding:0;position:absolute;right:15px;top:18px;transition:opacity .5s ease .5s;width:18px}.delete-button:hover{opacity:.6}
+.delete-button{background-color:transparent;background-image:url(images/delete.a274c87c0f6b553b47ad.svg);background-position:50%;background-repeat:no-repeat;background-size:contain;border-style:none;cursor:pointer;display:block;height:19.3px;padding:0;position:absolute;right:15px;top:18px;transition:opacity .5s ease .5s;width:18px}.delete-button:hover{opacity:.6}
 .popup-place__container{background:transparent;border-radius:10px;box-shadow:0 0 25px rgba(0,0,0,.15);display:flex;flex-direction:column;position:relative}
 .popup-place__image{max-height:75vh;max-width:75vw}
 .popup-place__name{color:#fff;font-size:12px;font-weight:400;line-height:15px;margin:10px 0 0}
@@ -37,4 +37,6 @@
 .form__input-error{color:red;font-size:12px;font-weight:400;left:0;line-height:15px;opacity:0;position:absolute;top:calc(100% + 5px);transition:opacity .3s}
 .form__input-error_active{opacity:1}
 .form__submit-btn_inactive{background:#e5e5e5;border:1px solid #000;border-radius:2px;box-sizing:border-box;color:#000;opacity:.2;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.card__like-block{align-self:center;display:flex;flex-direction:column;grid-area:card__like-block;margin:0 auto;padding:0}
+.card__like-counter{align-self:center;color:#000;font-size:13px;font-weight:400;height:13px;line-height:16px;margin-top:3px;text-align:center;width:10px}
 
