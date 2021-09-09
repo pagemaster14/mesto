@@ -27,7 +27,6 @@
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__text/form__text.css);
 @import url(../blocks/form/__text/_invalid/form__text_invalid.css);
-@import url(../blocks/form/__submit-btn/form__submit-btn.css);
 @import url(../blocks/delete-button/delete-button.css);
 @import url(../blocks/popup-place/__container/popup-place__container.css);
 @import url(../blocks/popup-place/__image/popup-place__image.css);
@@ -41,3 +40,4 @@
 @import url(../blocks/card/__like-counter/card__like-counter.css);
 @import url(../blocks/avatar-button/avatar-button.css);
 @import url(../blocks/avatar-block/avatar-block.css);
+@import url(../blocks/submit-btn/submit-btn.css);

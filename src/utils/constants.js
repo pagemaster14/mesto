@@ -14,7 +14,7 @@ const popupAddElement = document.querySelector('.popup_type_add');
 const popupEditAvatarElement = document.querySelector('.popup_type_edit-avatar');
 const popupPlaceElement = document.querySelector('.popup-place');
 const popupDeleteElement = document.querySelector('.popup_type_delete');
-const popupDeleteConfirmButton = document.querySelector('.form__submit-btn_type_delete')
+const popupDeleteConfirmButton = document.querySelector('.submit-btn_type_delete')
 
 const validationSettings = {
     formSelector: '.form',
