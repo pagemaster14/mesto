@@ -27,7 +27,6 @@
 .form{margin-top:75px}@media screen and (min-width:768px){.form{margin-top:54px}}
 .form__text{border:none;border-bottom:1px solid rgba(0,0,0,.2);font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:400;line-height:17px;padding-bottom:13px;width:100%}
 .form__text_invalid{border-bottom:1px solid red}
-.form__submit-btn{background:#000;border-radius:2px;color:#fff;cursor:pointer;font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:400;height:46px;line-height:17px;margin-top:45px;text-align:center;transition:opacity .5s ease .5s;width:238px}@media screen and (min-width:768px){.form__submit-btn{font-size:18px;height:50px;line-height:22px;margin-top:48px;width:358px}}.form__submit-btn:hover{opacity:.8}
 .delete-button{background-color:transparent;background-image:url(images/delete.a274c87c0f6b553b47ad.svg);background-position:50%;background-repeat:no-repeat;background-size:contain;border-style:none;cursor:pointer;display:none;height:19.3px;padding:0;position:absolute;right:15px;top:18px;transition:opacity .5s ease .5s;width:18px}.delete-button:hover{opacity:.6}
 .popup-place__container{background:transparent;border-radius:10px;box-shadow:0 0 25px rgba(0,0,0,.15);display:flex;flex-direction:column;position:relative}
 .popup-place__image{max-height:75vh;max-width:75vw}
@@ -41,4 +40,5 @@
 .card__like-counter{align-self:center;color:#000;font-size:13px;font-weight:400;height:13px;line-height:16px;margin-top:3px;text-align:center;width:10px}
 .avatar-button{background-color:#000;background-image:url(images/ruchkaEditAvatar.a086f758840ae814ecde.svg);background-position:50%;background-repeat:no-repeat;border:none;border-radius:50%;cursor:pointer;left:0;min-height:100%;min-width:100%;opacity:0;padding:0;position:absolute;top:-1px;transition:opacity .5s ease .5s}.avatar-button:hover{opacity:.8}
 .avatar-block{position:relative}
+.submit-btn{background:#000;border-radius:2px;color:#fff;cursor:pointer;font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:400;height:46px;line-height:17px;margin-top:45px;text-align:center;transition:opacity .5s ease .5s;width:238px}@media screen and (min-width:768px){.submit-btn{font-size:18px;height:50px;line-height:22px;margin-top:48px;width:358px}}.submit-btn:hover{opacity:.8}
 
