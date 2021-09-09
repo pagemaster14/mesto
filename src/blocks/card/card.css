@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 189px 1fr;
     grid-template-rows: 282px 79px;
-    grid-template-areas: "card__image card__image" "card__name like-button";
+    grid-template-areas: "card__image card__image" "card__name card__like-block";
 }
 
 @media screen and (min-width: 768px) {

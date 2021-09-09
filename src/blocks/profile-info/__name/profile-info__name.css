@@ -13,6 +13,7 @@
 
 @media screen and (min-width: 768px) {
     .profile-info__name {
+        text-align: left;
         font-size: 42px;
         line-height: 48px;
     }

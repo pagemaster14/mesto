@@ -37,3 +37,7 @@
 @import url(../blocks/form/__input-error/form__input-error.css);
 @import url(../blocks/form/__input-error/_active/form__input-error_active.css);
 @import url(../blocks/form/__submit-btn/_inactive/form__submit-btn_inactive.css);
+@import url(../blocks/card/__like-block/card__like-block.css);
+@import url(../blocks/card/__like-counter/card__like-counter.css);
+@import url(../blocks/avatar-button/avatar-button.css);
+@import url(../blocks/avatar-block/avatar-block.css);

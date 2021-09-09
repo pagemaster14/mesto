@@ -1,9 +1,6 @@
 .like-button {
     width: 22px;
     height: 19px;
-    grid-area: like-button;
-    margin: 0 auto;
-    padding: 0;
     border-style: none;
     background-image: url(../../images/VectorStroke.svg);
     background-position: center;

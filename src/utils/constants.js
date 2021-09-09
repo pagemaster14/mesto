@@ -1,16 +1,20 @@
+const profileImage = document.querySelector('.profile__image')
 const popupEditOpenButtonElement = document.querySelector('.edit-button');
 const popupAddOpenButtonElement = document.querySelector('.add-button');
+const popupEditAvatarOpenButtonElement = document.querySelector('.avatar-button');
 const formAddElement = document.querySelector('.form_type_add');
 const formEditElement = document.querySelector('.form_type_edit');
+const formEditAvatarElement = document.querySelector('.form_type_edit-avatar');
 const nameInput = document.querySelector('.form__text_type_name');
 const jobInput = document.querySelector('.form__text_type_bio');
-const cardName = document.querySelector('.form__text_type_place');
-const cardImg = document.querySelector('.form__text_type_img');
 const itemTemplateContent = document.querySelector('.item-template').content;
 const cardContainer = document.querySelector('.cards');
 const popupEditElement = document.querySelector('.popup_type_edit-profile');
 const popupAddElement = document.querySelector('.popup_type_add');
+const popupEditAvatarElement = document.querySelector('.popup_type_edit-avatar');
 const popupPlaceElement = document.querySelector('.popup-place');
+const popupDeleteElement = document.querySelector('.popup_type_delete');
+const popupDeleteConfirmButton = document.querySelector('.form__submit-btn_type_delete')
 
 const validationSettings = {
     formSelector: '.form',
@@ -24,4 +28,12 @@ const validationSettings = {
     invalidText: 'form__text_invalid'
 };
 
-export { validationSettings, popupEditOpenButtonElement, popupAddOpenButtonElement, formAddElement, formEditElement, nameInput, jobInput, cardName, cardImg, itemTemplateContent, cardContainer, popupEditElement, popupAddElement, popupPlaceElement };
+const options = {
+    baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-27/',
+    headers: {
+        authorization: 'a70aac99-3995-441f-a1d5-acc4588f1199',
+        'Content-Type': 'application/json'
+    },
+};
+
+export { validationSettings, options, profileImage, popupDeleteConfirmButton, popupEditOpenButtonElement, popupAddOpenButtonElement, popupEditAvatarOpenButtonElement, formAddElement, formEditElement, formEditAvatarElement, nameInput, jobInput, itemTemplateContent, cardContainer, popupEditElement, popupAddElement, popupPlaceElement, popupDeleteElement, popupEditAvatarElement };
