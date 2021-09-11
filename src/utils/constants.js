@@ -1,4 +1,3 @@
-const profileImage = document.querySelector('.profile__image')
 const popupEditOpenButtonElement = document.querySelector('.edit-button');
 const popupAddOpenButtonElement = document.querySelector('.add-button');
 const popupEditAvatarOpenButtonElement = document.querySelector('.avatar-button');
@@ -36,4 +35,4 @@ const options = {
     },
 };
 
-export { validationSettings, options, profileImage, popupDeleteConfirmButton, popupEditOpenButtonElement, popupAddOpenButtonElement, popupEditAvatarOpenButtonElement, formAddElement, formEditElement, formEditAvatarElement, nameInput, jobInput, itemTemplateContent, cardContainer, popupEditElement, popupAddElement, popupPlaceElement, popupDeleteElement, popupEditAvatarElement };
+export { validationSettings, options, popupDeleteConfirmButton, popupEditOpenButtonElement, popupAddOpenButtonElement, popupEditAvatarOpenButtonElement, formAddElement, formEditElement, formEditAvatarElement, nameInput, jobInput, itemTemplateContent, cardContainer, popupEditElement, popupAddElement, popupPlaceElement, popupDeleteElement, popupEditAvatarElement };

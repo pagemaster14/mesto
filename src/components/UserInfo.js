@@ -1,7 +1,8 @@
 export class UserInfo {
-    constructor({ userNameSelector, userBioSelector }) {
+    constructor({ userNameSelector, userBioSelector, userAvatarSelector }) {
         this._profileName = document.querySelector(userNameSelector)
         this._profileJob = document.querySelector(userBioSelector)
+        this._profileAvatar = document.querySelector(userAvatarSelector)
     }
 
     getUserInfo() {
@@ -17,6 +18,9 @@ export class UserInfo {
         }
         if (item.about) {
             this._profileJob.textContent = item.about;
+        }
+        if (item.avatar) {
+            this._profileAvatar.src = item.avatar;
         }
     }
 }

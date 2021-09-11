@@ -47,21 +47,24 @@ export class Card {
 
     _setEventListeners() {
         this._deleteButton.addEventListener('click', () => {
-            this._handleDeleteClick(this._id, this._element)
+            this._handleDeleteClick(this._element, this._id)
         });
+
         this._likeButton.addEventListener('click', () => {
             if (!this._likeButton.classList.contains('like-button_active')) {
-                this._likeToggle();
                 this._likeCard(this._id)
                     .then((data) => {
+                        this._likeToggle();
                         this._likeCounter.textContent = `${data.likes.length}`;
                     })
+                    .catch(err => console.log(err))
             } else {
-                this._likeToggle();
                 this._dislikeCard(this._id)
                     .then((data) => {
+                        this._likeToggle();
                         this._likeCounter.textContent = `${data.likes.length}`;
                     })
+                    .catch(err => console.log(err))
             }
         });
         this._selectCard.addEventListener('click', () => {
@@ -79,5 +82,4 @@ export class Card {
     _dislikeCard(id) {
         return this._api.deleteLike(id)
     }
-
 }
